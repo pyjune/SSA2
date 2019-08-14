@@ -1,0 +1,12 @@
+	3(i-1, j+0)
+2(i+0, j-1)	    (i, j)	0(i+0, j+1)
+	1(i+1, j+0)
+
+di = [0, 1, 0, -1]
+dj = [1, 0, -1, 0]
+#NxN에서
+# i, j의 이웃 ni, nj는...
+for k : 0 ->3
+	ni = i + di[k]
+	nj = j + dj[k]
+	if(ni>=0 and ni<N and nj>=0 and nj<N)	# 존재하는 이웃인지 검사
