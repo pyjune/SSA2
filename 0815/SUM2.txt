@@ -1,0 +1,20 @@
+maxV = 0
+#행과 열의 합
+s3 = 0 #오른쪽 아래
+s4 = 0 #왼쪽 아래
+for i : 0 -> 99
+	s1 = 0 #행의 합. 행이 바뀔 때 초기화
+	s2 = 0 #열의 합
+	s3 = s3 + arr[i][i]
+	s4 = s4 + arr[i][99-i]
+	for j : 0 -> 99
+		s1 = s1 + arr[i][j]
+		s2 = s2 + arr[j][i]
+	if maxV<s1 # 행의 합과 비교
+		maxV = s1
+	if maxV<s2
+		maxV = s2
+if maxV < s3
+	maxV = s3
+if maxV < s4
+	maxV = s4
