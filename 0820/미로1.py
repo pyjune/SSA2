@@ -30,4 +30,4 @@ for tc in range(1, T+1):
             if maze[i][j] == '2':
                 startI = i
                 startJ = j
-    print('#{} {}'.format(tc, f(i, j)))
+    print('#{} {}'.format(tc, f(startI, startJ)))
