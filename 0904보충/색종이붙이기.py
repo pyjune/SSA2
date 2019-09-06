@@ -3,8 +3,10 @@ def f(n, s): # n 사용한 종이수, s 남은 1
     if s==0:
         if minV>n:
             minV = n
-    elif minV == 4:
+    elif n>=minV:
         return
+    #elif minV==4:
+     #   return
     elif sum(paper)==0:
         return
     else:
