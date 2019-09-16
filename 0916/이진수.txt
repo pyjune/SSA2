@@ -1,0 +1,12 @@
+# s = '47FE' -> 4, 7, 15, 14로 바꾸면서
+#b3, b2, b1, b0을 차례로 검사
+for i in range(N):
+	if '0'<=s[i]<='9':
+		digit = ord(s[i]) - ord('0')
+	else: # 'A'<=s[i]<='F'
+		digit = ord(s[i]) - ord('A') + 10
+	for j in range(3, -1, -1):
+		if digit & (1<<j) == 0:
+			print('0', end='')
+		else:
+			print('1', end='')
