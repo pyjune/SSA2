@@ -1,0 +1,15 @@
+# 3개의 기둥을 세울 칸의 번호를 정한다.
+
+for i in range(N*M-2): # 첫번째 기둥
+     if lab[i//M][i%M]==0: # 기둥을 세울 수 있으면
+         for j in range(i+1, N*M-1): # 두번째 기둥
+	if lab[j//M][j%M]==0: # 
+	    for k in range(j+1, N*M); # 세번째 기둥
+		if lab[k//M][j%M]==0:
+			lab[i//M][i%M]=1 # 해당위치에 기둥을 세우고
+			lab[j//M][j%M]=1
+			lab[k//M][j%M]=1
+			bfs(lab, N, M)
+			lab[i//M][i%M]=0 # 다른 위치에 기둥을 세우려면
+			lab[j//M][j%M]=0
+			lab[k//M][j%M]=0
