@@ -32,7 +32,7 @@ toL = [3, 0, 1, 2]
 toD = [1, 2, 3, 0]
 
 N = int(input())
-arr = [[0]*(N+1) for _ in range(N+1)] # 아직 지나가지 않은 자리 -1
+arr = [[0]*(N+1) for _ in range(N+1)] # 좌표가 1부터 
 K = int(input())
 for i in range(K):
     r, c = map(int, input().split())
